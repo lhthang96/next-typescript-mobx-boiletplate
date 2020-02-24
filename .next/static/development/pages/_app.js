@@ -10056,11 +10056,11 @@ module.exports = (__webpack_require__(/*! dll-reference dll_5f137288facb1107b491
 
 
     (window.__NEXT_P=window.__NEXT_P||[]).push(["/_app", function() {
-      var mod = __webpack_require__(/*! private-next-pages/_app.tsx */ "./pages/_app.tsx")
+      var mod = __webpack_require__(/*! private-next-pages/_app.tsx */ "./src/pages/_app.tsx")
       if(true) {
-        module.hot.accept(/*! private-next-pages/_app.tsx */ "./pages/_app.tsx", function() {
+        module.hot.accept(/*! private-next-pages/_app.tsx */ "./src/pages/_app.tsx", function() {
           if(!next.router.components["/_app"]) return
-          var updatedPage = __webpack_require__(/*! private-next-pages/_app.tsx */ "./pages/_app.tsx")
+          var updatedPage = __webpack_require__(/*! private-next-pages/_app.tsx */ "./src/pages/_app.tsx")
           next.router.update("/_app", updatedPage)
         })
       }
@@ -14268,10 +14268,10 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/_app.tsx":
-/*!************************!*\
-  !*** ./pages/_app.tsx ***!
-  \************************/
+/***/ "./src/pages/_app.tsx":
+/*!****************************!*\
+  !*** ./src/pages/_app.tsx ***!
+  \****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -14281,9 +14281,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var mobx_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! mobx-react */ "./node_modules/mobx-react/dist/mobxreact.esm.js");
-/* harmony import */ var _store_movies__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/movies */ "./store/movies/index.ts");
+/* harmony import */ var _store_movies__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/movies */ "./src/store/movies/index.ts");
 
-var _jsxFileName = "C:\\Users\\thangluong\\Desktop\\mypc\\Projects\\Personal\\next-typescript-mobx-boiletplate\\pages\\_app.tsx";
+var _jsxFileName = "C:\\Users\\thangluong\\Desktop\\mypc\\Projects\\Personal\\next-typescript-mobx-boiletplate\\src\\pages\\_app.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -14313,10 +14313,10 @@ var App = function App(_ref) {
 
 /***/ }),
 
-/***/ "./store/movies/index.ts":
-/*!*******************************!*\
-  !*** ./store/movies/index.ts ***!
-  \*******************************/
+/***/ "./src/store/movies/index.ts":
+/*!***********************************!*\
+  !*** ./src/store/movies/index.ts ***!
+  \***********************************/
 /*! exports provided: MoviesStore, moviesStore */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

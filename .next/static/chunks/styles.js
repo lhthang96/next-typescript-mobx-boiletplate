@@ -1,43 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["styles"],{
 
-/***/ "./containers/LandingLayout/index.scss":
-/*!*********************************************!*\
-  !*** ./containers/LandingLayout/index.scss ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-module.exports = {"page-content":"page-content___3g_44"};;
-    if (true) {
-      var injectCss = function injectCss(prev, href) {
-        var link = prev.cloneNode();
-        link.href = href;
-        link.onload = function() {
-          prev.parentNode.removeChild(prev);
-        };
-        prev.stale = true;
-        prev.parentNode.insertBefore(link, prev);
-      };
-      module.hot.dispose(function() {
-        window.__webpack_reload_css__ = true;
-      });
-      if (window.__webpack_reload_css__) {
-        module.hot.__webpack_reload_css__ = false;
-        console.log("[HMR] Reloading stylesheets...");
-        var prefix = document.location.protocol + '//' + document.location.host;
-        document
-          .querySelectorAll("link[href][rel=stylesheet]")
-          .forEach(function(link) {
-            if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1582432976183");
-          });
-      }
-    }
-  
-
-/***/ }),
-
 /***/ "./node_modules/antd/lib/breadcrumb/style/index.less":
 /*!***********************************************************!*\
   !*** ./node_modules/antd/lib/breadcrumb/style/index.less ***!
@@ -67,7 +29,7 @@ module.exports = {"page-content":"page-content___3g_44"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1582432978712");
+            injectCss(link, link.href.split("?")[0] + "?unix=1582510970718");
           });
       }
     }
@@ -104,7 +66,7 @@ module.exports = {"page-content":"page-content___3g_44"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1582432978557");
+            injectCss(link, link.href.split("?")[0] + "?unix=1582510970712");
           });
       }
     }
@@ -141,7 +103,7 @@ module.exports = {"page-content":"page-content___3g_44"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1582432978559");
+            injectCss(link, link.href.split("?")[0] + "?unix=1582511031438");
           });
       }
     }
@@ -178,7 +140,7 @@ module.exports = {"page-content":"page-content___3g_44"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1582432979406");
+            injectCss(link, link.href.split("?")[0] + "?unix=1582510971155");
           });
       }
     }
@@ -215,7 +177,7 @@ module.exports = {"page-content":"page-content___3g_44"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1582432978566");
+            injectCss(link, link.href.split("?")[0] + "?unix=1582511032763");
           });
       }
     }
@@ -252,7 +214,7 @@ module.exports = {"page-content":"page-content___3g_44"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1582432978794");
+            injectCss(link, link.href.split("?")[0] + "?unix=1582510970720");
           });
       }
     }
@@ -289,7 +251,7 @@ module.exports = {"page-content":"page-content___3g_44"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1582432978555");
+            injectCss(link, link.href.split("?")[0] + "?unix=1582511031442");
           });
       }
     }
@@ -326,7 +288,7 @@ module.exports = {"page-content":"page-content___3g_44"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1582432978564");
+            injectCss(link, link.href.split("?")[0] + "?unix=1582510970714");
           });
       }
     }
@@ -363,7 +325,7 @@ module.exports = {"page-content":"page-content___3g_44"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1582432979003");
+            injectCss(link, link.href.split("?")[0] + "?unix=1582510970919");
           });
       }
     }
@@ -400,7 +362,7 @@ module.exports = {"page-content":"page-content___3g_44"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1582432978562");
+            injectCss(link, link.href.split("?")[0] + "?unix=1582511031037");
           });
       }
     }
@@ -437,7 +399,7 @@ module.exports = {"page-content":"page-content___3g_44"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1582432978552");
+            injectCss(link, link.href.split("?")[0] + "?unix=1582510970709");
           });
       }
     }
@@ -474,7 +436,7 @@ module.exports = {"page-content":"page-content___3g_44"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1582432978569");
+            injectCss(link, link.href.split("?")[0] + "?unix=1582511032766");
           });
       }
     }
@@ -511,7 +473,45 @@ module.exports = {"page-content":"page-content___3g_44"};;
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1582432979517");
+            injectCss(link, link.href.split("?")[0] + "?unix=1582510971378");
+          });
+      }
+    }
+  
+
+/***/ }),
+
+/***/ "./src/containers/LandingLayout/index.scss":
+/*!*************************************************!*\
+  !*** ./src/containers/LandingLayout/index.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"page-content":"page-content___2ZCGs"};;
+    if (true) {
+      var injectCss = function injectCss(prev, href) {
+        var link = prev.cloneNode();
+        link.href = href;
+        link.onload = function() {
+          prev.parentNode.removeChild(prev);
+        };
+        prev.stale = true;
+        prev.parentNode.insertBefore(link, prev);
+      };
+      module.hot.dispose(function() {
+        window.__webpack_reload_css__ = true;
+      });
+      if (window.__webpack_reload_css__) {
+        module.hot.__webpack_reload_css__ = false;
+        console.log("[HMR] Reloading stylesheets...");
+        var prefix = document.location.protocol + '//' + document.location.host;
+        document
+          .querySelectorAll("link[href][rel=stylesheet]")
+          .forEach(function(link) {
+            if (!link.href.match(prefix) || link.stale) return;
+            injectCss(link, link.href.split("?")[0] + "?unix=1582510969599");
           });
       }
     }

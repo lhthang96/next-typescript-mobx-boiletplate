@@ -14,7 +14,7 @@ exports.sassRule = {
   loader: 'sass-resources-loader',
   options: {
     resources: [
-      path.resolve(__dirname, '../common/styles/variables.scss'),
+      path.resolve(__dirname, '../src/common/styles/variables.scss'),
     ],
   },
 };

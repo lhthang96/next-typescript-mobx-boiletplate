@@ -1,490 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\movies.js"],{
 
-/***/ "./common/http/movies.ts":
-/*!*******************************!*\
-  !*** ./common/http/movies.ts ***!
-  \*******************************/
-/*! exports provided: searchMovies */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "searchMovies", function() { return searchMovies; });
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var lodash_fp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/fp */ "./node_modules/lodash/fp.js");
-/* harmony import */ var lodash_fp__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_fp__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-var searchMovies = function searchMovies(query) {
-  var res, data;
-  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function searchMovies$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          _context.next = 2;
-          return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default()("https://api.tvmaze.com/search/shows?q=".concat(query)));
-
-        case 2:
-          res = _context.sent;
-          _context.next = 5;
-          return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(res.json());
-
-        case 5:
-          data = _context.sent;
-          return _context.abrupt("return", data.map(function (entry) {
-            return Object(lodash_fp__WEBPACK_IMPORTED_MODULE_2__["get"])('show', entry);
-          }));
-
-        case 7:
-        case "end":
-          return _context.stop();
-      }
-    }
-  });
-};
-
-/***/ }),
-
-/***/ "./containers/LandingLayout/LandingBreadcumbs/index.tsx":
-/*!**************************************************************!*\
-  !*** ./containers/LandingLayout/LandingBreadcumbs/index.tsx ***!
-  \**************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var antd_lib_breadcrumb_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/breadcrumb/style */ "./node_modules/antd/lib/breadcrumb/style/index.js");
-/* harmony import */ var antd_lib_breadcrumb_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_breadcrumb_style__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/breadcrumb */ "./node_modules/antd/lib/breadcrumb/index.js");
-/* harmony import */ var antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
-
-
-var _jsxFileName = "C:\\Users\\thangluong\\Desktop\\mypc\\Projects\\Personal\\next-typescript-mobx-boiletplate\\containers\\LandingLayout\\LandingBreadcumbs\\index.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
-
-
-
-var LandingBreadcumbs = function LandingBreadcumbs(_ref) {
-  var path = _ref.path;
-
-  var renderBreadcumbs = function renderBreadcumbs() {
-    var breadcumbElements = path ? lodash__WEBPACK_IMPORTED_MODULE_3___default.a.split(path, '/') : ['Home'];
-    return breadcumbElements.map(function (breadcumb) {
-      return __jsx(antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1___default.a.Item, {
-        key: breadcumb,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        },
-        __self: this
-      }, lodash__WEBPACK_IMPORTED_MODULE_3___default.a.capitalize(breadcumb));
-    });
-  };
-
-  return __jsx(antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    style: {
-      margin: '16px 0'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, renderBreadcumbs());
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (LandingBreadcumbs);
-
-/***/ }),
-
-/***/ "./containers/LandingLayout/LandingHeader/index.tsx":
-/*!**********************************************************!*\
-  !*** ./containers/LandingLayout/LandingHeader/index.tsx ***!
-  \**********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/layout/style */ "./node_modules/antd/lib/layout/style/index.js");
-/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/layout */ "./node_modules/antd/lib/layout/index.js");
-/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-
-
-var _jsxFileName = "C:\\Users\\thangluong\\Desktop\\mypc\\Projects\\Personal\\next-typescript-mobx-boiletplate\\containers\\LandingLayout\\LandingHeader\\index.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
-
-var Header = antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a.Header;
-
-var LandingHeader = function LandingHeader(_ref) {
-  var title = _ref.title;
-  return __jsx(Header, {
-    className: "header",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, __jsx("p", {
-    style: {
-      color: '#fff'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, "NextJS + TypeScript boilerplate || ", title || 'Home', " "));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (LandingHeader);
-
-/***/ }),
-
-/***/ "./containers/LandingLayout/LandingLeftSider/LeftMenu.constant.ts":
-/*!************************************************************************!*\
-  !*** ./containers/LandingLayout/LandingLeftSider/LeftMenu.constant.ts ***!
-  \************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var LeftMenu = [{
-  id: 'about',
-  antIcon: 'user',
-  label: 'about',
-  link: '/about'
-}, {
-  id: 'movies',
-  antIcon: 'folder-open',
-  label: 'movies',
-  link: '/movies'
-}, {
-  id: 'menu1',
-  antIcon: 'hourglass',
-  label: 'menu 1',
-  children: [{
-    id: 'submenu1-1',
-    antIcon: 'fall',
-    label: 'submenu 1.1',
-    link: '/'
-  }, {
-    id: 'submenu1-2',
-    antIcon: 'rise',
-    label: 'submenu 1.2',
-    link: '/'
-  }]
-}, {
-  id: 'menu2',
-  antIcon: 'heat-map',
-  label: 'menu 2',
-  children: [{
-    id: 'submenu2-1',
-    antIcon: 'area-chart',
-    label: 'submenu 2.1',
-    link: '/'
-  }, {
-    id: 'submenu2-2',
-    antIcon: 'pie-chart',
-    label: 'submenu 2.2',
-    link: '/'
-  }, {
-    id: 'submenu2-3',
-    antIcon: 'dot-chart',
-    label: 'submenu 2.3',
-    link: '/'
-  }]
-}];
-/* harmony default export */ __webpack_exports__["default"] = (LeftMenu);
-
-/***/ }),
-
-/***/ "./containers/LandingLayout/LandingLeftSider/index.tsx":
-/*!*************************************************************!*\
-  !*** ./containers/LandingLayout/LandingLeftSider/index.tsx ***!
-  \*************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var antd_lib_icon_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/icon/style */ "./node_modules/antd/lib/icon/style/index.js");
-/* harmony import */ var antd_lib_icon_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_icon_style__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var antd_lib_icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/icon */ "./node_modules/antd/lib/icon/index.js");
-/* harmony import */ var antd_lib_icon__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_icon__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var antd_lib_menu_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd/lib/menu/style */ "./node_modules/antd/lib/menu/style/index.js");
-/* harmony import */ var antd_lib_menu_style__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_menu_style__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var antd_lib_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/menu */ "./node_modules/antd/lib/menu/index.js");
-/* harmony import */ var antd_lib_menu__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_menu__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd/lib/layout/style */ "./node_modules/antd/lib/layout/style/index.js");
-/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd/lib/layout */ "./node_modules/antd/lib/layout/index.js");
-/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _LeftMenu_constant__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./LeftMenu.constant */ "./containers/LandingLayout/LandingLeftSider/LeftMenu.constant.ts");
-
-
-
-
-
-
-var _jsxFileName = "C:\\Users\\thangluong\\Desktop\\mypc\\Projects\\Personal\\next-typescript-mobx-boiletplate\\containers\\LandingLayout\\LandingLeftSider\\index.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
-
-
-
-
-var Sider = antd_lib_layout__WEBPACK_IMPORTED_MODULE_5___default.a.Sider;
-var SubMenu = antd_lib_menu__WEBPACK_IMPORTED_MODULE_3___default.a.SubMenu;
-
-var LandingLeftSider = function LandingLeftSider() {
-  var renderSubMenu = function renderSubMenu(menuItem) {
-    return __jsx(SubMenu, {
-      key: menuItem.id,
-      title: __jsx("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 18
-        },
-        __self: this
-      }, __jsx(antd_lib_icon__WEBPACK_IMPORTED_MODULE_1___default.a, {
-        type: menuItem.antIcon,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 19
-        },
-        __self: this
-      }), __jsx("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 20
-        },
-        __self: this
-      }, lodash__WEBPACK_IMPORTED_MODULE_8___default.a.capitalize(menuItem.label))),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15
-      },
-      __self: this
-    }, menuItem.children.map(function (subMenuItem) {
-      return __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_3___default.a.Item, {
-        key: subMenuItem.id,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26
-        },
-        __self: this
-      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
-        href: subMenuItem.link,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 27
-        },
-        __self: this
-      }, __jsx("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 28
-        },
-        __self: this
-      }, __jsx(antd_lib_icon__WEBPACK_IMPORTED_MODULE_1___default.a, {
-        type: subMenuItem.antIcon,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29
-        },
-        __self: this
-      }), __jsx("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 30
-        },
-        __self: this
-      }, lodash__WEBPACK_IMPORTED_MODULE_8___default.a.capitalize(subMenuItem.label)))));
-    }));
-  };
-
-  var renderLeftMenu = function renderLeftMenu() {
-    return __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      key: "left-menu",
-      mode: "inline",
-      defaultSelectedKeys: ['1'],
-      defaultOpenKeys: ['sub1'],
-      style: {
-        height: '100%',
-        borderRight: 0
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 41
-      },
-      __self: this
-    }, _LeftMenu_constant__WEBPACK_IMPORTED_MODULE_9__["default"].map(function (menu) {
-      return menu.children ? renderSubMenu(menu) : __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_3___default.a.Item, {
-        key: menu.id,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 53
-        },
-        __self: this
-      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
-        href: menu.link,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 54
-        },
-        __self: this
-      }, __jsx("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 55
-        },
-        __self: this
-      }, __jsx(antd_lib_icon__WEBPACK_IMPORTED_MODULE_1___default.a, {
-        type: menu.antIcon,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 56
-        },
-        __self: this
-      }), __jsx("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 57
-        },
-        __self: this
-      }, lodash__WEBPACK_IMPORTED_MODULE_8___default.a.capitalize(menu.label)))));
-    }));
-  };
-
-  return __jsx(Sider, {
-    width: 200,
-    style: {
-      background: '#fff'
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: this
-  }, renderLeftMenu());
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (LandingLeftSider);
-
-/***/ }),
-
-/***/ "./containers/LandingLayout/index.tsx":
-/*!********************************************!*\
-  !*** ./containers/LandingLayout/index.tsx ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/layout/style */ "./node_modules/antd/lib/layout/style/index.js");
-/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/layout */ "./node_modules/antd/lib/layout/index.js");
-/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _LandingBreadcumbs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./LandingBreadcumbs */ "./containers/LandingLayout/LandingBreadcumbs/index.tsx");
-/* harmony import */ var _LandingHeader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./LandingHeader */ "./containers/LandingLayout/LandingHeader/index.tsx");
-/* harmony import */ var _LandingLeftSider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./LandingLeftSider */ "./containers/LandingLayout/LandingLeftSider/index.tsx");
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./index.scss */ "./containers/LandingLayout/index.scss");
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_6__);
-
-
-var _jsxFileName = "C:\\Users\\thangluong\\Desktop\\mypc\\Projects\\Personal\\next-typescript-mobx-boiletplate\\containers\\LandingLayout\\index.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
-
-
-
-
-
-var Content = antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a.Content;
-
-var LandingLayout = function LandingLayout(_ref) {
-  var children = _ref.children,
-      path = _ref.path,
-      title = _ref.title;
-  return __jsx(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }, __jsx(_LandingHeader__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    title: title,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }), __jsx(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, __jsx(_LandingLeftSider__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }), __jsx(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    className: _index_scss__WEBPACK_IMPORTED_MODULE_6___default.a['page-content'],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24
-    },
-    __self: this
-  }, __jsx(_LandingBreadcumbs__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    path: path,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25
-    },
-    __self: this
-  }), __jsx(Content, {
-    style: {
-      background: '#fff',
-      padding: 24,
-      margin: 0,
-      minHeight: 280
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, children))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (LandingLayout);
-
-/***/ }),
-
 /***/ "./node_modules/@ant-design/colors/lib/generate.js":
 /*!*********************************************************!*\
   !*** ./node_modules/@ant-design/colors/lib/generate.js ***!
@@ -63018,20 +62533,20 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fmovies&absolutePagePath=C%3A%5CUsers%5Cthangluong%5CDesktop%5Cmypc%5CProjects%5CPersonal%5Cnext-typescript-mobx-boiletplate%5Cpages%5Cmovies%5Cindex.tsx!./":
-/*!***************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fmovies&absolutePagePath=C%3A%5CUsers%5Cthangluong%5CDesktop%5Cmypc%5CProjects%5CPersonal%5Cnext-typescript-mobx-boiletplate%5Cpages%5Cmovies%5Cindex.tsx ***!
-  \***************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fmovies&absolutePagePath=C%3A%5CUsers%5Cthangluong%5CDesktop%5Cmypc%5CProjects%5CPersonal%5Cnext-typescript-mobx-boiletplate%5Csrc%5Cpages%5Cmovies%5Cindex.tsx!./":
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fmovies&absolutePagePath=C%3A%5CUsers%5Cthangluong%5CDesktop%5Cmypc%5CProjects%5CPersonal%5Cnext-typescript-mobx-boiletplate%5Csrc%5Cpages%5Cmovies%5Cindex.tsx ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
     (window.__NEXT_P=window.__NEXT_P||[]).push(["/movies", function() {
-      var mod = __webpack_require__(/*! ./pages/movies/index.tsx */ "./pages/movies/index.tsx")
+      var mod = __webpack_require__(/*! ./src/pages/movies/index.tsx */ "./src/pages/movies/index.tsx")
       if(true) {
-        module.hot.accept(/*! ./pages/movies/index.tsx */ "./pages/movies/index.tsx", function() {
+        module.hot.accept(/*! ./src/pages/movies/index.tsx */ "./src/pages/movies/index.tsx", function() {
           if(!next.router.components["/movies"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/movies/index.tsx */ "./pages/movies/index.tsx")
+          var updatedPage = __webpack_require__(/*! ./src/pages/movies/index.tsx */ "./src/pages/movies/index.tsx")
           next.router.update("/movies", updatedPage)
         })
       }
@@ -81291,10 +80806,495 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/movies/index.tsx":
-/*!********************************!*\
-  !*** ./pages/movies/index.tsx ***!
-  \********************************/
+/***/ "./src/common/http/movies.ts":
+/*!***********************************!*\
+  !*** ./src/common/http/movies.ts ***!
+  \***********************************/
+/*! exports provided: searchMovies */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "searchMovies", function() { return searchMovies; });
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash_fp__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/fp */ "./node_modules/lodash/fp.js");
+/* harmony import */ var lodash_fp__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_fp__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var searchMovies = function searchMovies(query) {
+  var res, data;
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function searchMovies$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          _context.next = 2;
+          return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_1___default()("https://api.tvmaze.com/search/shows?q=".concat(query)));
+
+        case 2:
+          res = _context.sent;
+          _context.next = 5;
+          return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(res.json());
+
+        case 5:
+          data = _context.sent;
+          return _context.abrupt("return", data.map(function (entry) {
+            return Object(lodash_fp__WEBPACK_IMPORTED_MODULE_2__["get"])('show', entry);
+          }));
+
+        case 7:
+        case "end":
+          return _context.stop();
+      }
+    }
+  });
+};
+
+/***/ }),
+
+/***/ "./src/containers/LandingLayout/LandingBreadcumbs/index.tsx":
+/*!******************************************************************!*\
+  !*** ./src/containers/LandingLayout/LandingBreadcumbs/index.tsx ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var antd_lib_breadcrumb_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/breadcrumb/style */ "./node_modules/antd/lib/breadcrumb/style/index.js");
+/* harmony import */ var antd_lib_breadcrumb_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_breadcrumb_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/breadcrumb */ "./node_modules/antd/lib/breadcrumb/index.js");
+/* harmony import */ var antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
+
+
+var _jsxFileName = "C:\\Users\\thangluong\\Desktop\\mypc\\Projects\\Personal\\next-typescript-mobx-boiletplate\\src\\containers\\LandingLayout\\LandingBreadcumbs\\index.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
+
+
+var LandingBreadcumbs = function LandingBreadcumbs(_ref) {
+  var path = _ref.path;
+
+  var renderBreadcumbs = function renderBreadcumbs() {
+    var breadcumbElements = path ? lodash__WEBPACK_IMPORTED_MODULE_3___default.a.split(path, '/') : ['Home'];
+    return breadcumbElements.map(function (breadcumb) {
+      return __jsx(antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1___default.a.Item, {
+        key: breadcumb,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      }, lodash__WEBPACK_IMPORTED_MODULE_3___default.a.capitalize(breadcumb));
+    });
+  };
+
+  return __jsx(antd_lib_breadcrumb__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    style: {
+      margin: '16px 0'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, renderBreadcumbs());
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (LandingBreadcumbs);
+
+/***/ }),
+
+/***/ "./src/containers/LandingLayout/LandingHeader/index.tsx":
+/*!**************************************************************!*\
+  !*** ./src/containers/LandingLayout/LandingHeader/index.tsx ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/layout/style */ "./node_modules/antd/lib/layout/style/index.js");
+/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/layout */ "./node_modules/antd/lib/layout/index.js");
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+
+
+var _jsxFileName = "C:\\Users\\thangluong\\Desktop\\mypc\\Projects\\Personal\\next-typescript-mobx-boiletplate\\src\\containers\\LandingLayout\\LandingHeader\\index.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
+var Header = antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a.Header;
+
+var LandingHeader = function LandingHeader(_ref) {
+  var title = _ref.title;
+  return __jsx(Header, {
+    className: "header",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, __jsx("p", {
+    style: {
+      color: '#fff'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, "NextJS + TypeScript boilerplate || ", title || 'Home', " "));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (LandingHeader);
+
+/***/ }),
+
+/***/ "./src/containers/LandingLayout/LandingLeftSider/LeftMenu.constant.ts":
+/*!****************************************************************************!*\
+  !*** ./src/containers/LandingLayout/LandingLeftSider/LeftMenu.constant.ts ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var LeftMenu = [{
+  id: 'about',
+  antIcon: 'user',
+  label: 'about',
+  link: '/about'
+}, {
+  id: 'movies',
+  antIcon: 'folder-open',
+  label: 'movies',
+  link: '/movies'
+}, {
+  id: 'menu1',
+  antIcon: 'hourglass',
+  label: 'menu 1',
+  children: [{
+    id: 'submenu1-1',
+    antIcon: 'fall',
+    label: 'submenu 1.1',
+    link: '/'
+  }, {
+    id: 'submenu1-2',
+    antIcon: 'rise',
+    label: 'submenu 1.2',
+    link: '/'
+  }]
+}, {
+  id: 'menu2',
+  antIcon: 'heat-map',
+  label: 'menu 2',
+  children: [{
+    id: 'submenu2-1',
+    antIcon: 'area-chart',
+    label: 'submenu 2.1',
+    link: '/'
+  }, {
+    id: 'submenu2-2',
+    antIcon: 'pie-chart',
+    label: 'submenu 2.2',
+    link: '/'
+  }, {
+    id: 'submenu2-3',
+    antIcon: 'dot-chart',
+    label: 'submenu 2.3',
+    link: '/'
+  }]
+}];
+/* harmony default export */ __webpack_exports__["default"] = (LeftMenu);
+
+/***/ }),
+
+/***/ "./src/containers/LandingLayout/LandingLeftSider/index.tsx":
+/*!*****************************************************************!*\
+  !*** ./src/containers/LandingLayout/LandingLeftSider/index.tsx ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var antd_lib_icon_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/icon/style */ "./node_modules/antd/lib/icon/style/index.js");
+/* harmony import */ var antd_lib_icon_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_icon_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd_lib_icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/icon */ "./node_modules/antd/lib/icon/index.js");
+/* harmony import */ var antd_lib_icon__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_icon__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var antd_lib_menu_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd/lib/menu/style */ "./node_modules/antd/lib/menu/style/index.js");
+/* harmony import */ var antd_lib_menu_style__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_menu_style__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var antd_lib_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/menu */ "./node_modules/antd/lib/menu/index.js");
+/* harmony import */ var antd_lib_menu__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_menu__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd/lib/layout/style */ "./node_modules/antd/lib/layout/style/index.js");
+/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd/lib/layout */ "./node_modules/antd/lib/layout/index.js");
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _LeftMenu_constant__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./LeftMenu.constant */ "./src/containers/LandingLayout/LandingLeftSider/LeftMenu.constant.ts");
+
+
+
+
+
+
+var _jsxFileName = "C:\\Users\\thangluong\\Desktop\\mypc\\Projects\\Personal\\next-typescript-mobx-boiletplate\\src\\containers\\LandingLayout\\LandingLeftSider\\index.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
+
+
+
+
+var Sider = antd_lib_layout__WEBPACK_IMPORTED_MODULE_5___default.a.Sider;
+var SubMenu = antd_lib_menu__WEBPACK_IMPORTED_MODULE_3___default.a.SubMenu;
+
+var LandingLeftSider = function LandingLeftSider() {
+  var renderSubMenu = function renderSubMenu(menuItem) {
+    return __jsx(SubMenu, {
+      key: menuItem.id,
+      title: __jsx("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        },
+        __self: this
+      }, __jsx(antd_lib_icon__WEBPACK_IMPORTED_MODULE_1___default.a, {
+        type: menuItem.antIcon,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        },
+        __self: this
+      }), __jsx("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20
+        },
+        __self: this
+      }, lodash__WEBPACK_IMPORTED_MODULE_8___default.a.capitalize(menuItem.label))),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, menuItem.children.map(function (subMenuItem) {
+      return __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_3___default.a.Item, {
+        key: subMenuItem.id,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+        href: subMenuItem.link,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
+        },
+        __self: this
+      }, __jsx("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        },
+        __self: this
+      }, __jsx(antd_lib_icon__WEBPACK_IMPORTED_MODULE_1___default.a, {
+        type: subMenuItem.antIcon,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      }), __jsx("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      }, lodash__WEBPACK_IMPORTED_MODULE_8___default.a.capitalize(subMenuItem.label)))));
+    }));
+  };
+
+  var renderLeftMenu = function renderLeftMenu() {
+    return __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      key: "left-menu",
+      mode: "inline",
+      defaultSelectedKeys: ['1'],
+      defaultOpenKeys: ['sub1'],
+      style: {
+        height: '100%',
+        borderRight: 0
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, _LeftMenu_constant__WEBPACK_IMPORTED_MODULE_9__["default"].map(function (menu) {
+      return menu.children ? renderSubMenu(menu) : __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_3___default.a.Item, {
+        key: menu.id,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53
+        },
+        __self: this
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+        href: menu.link,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
+        },
+        __self: this
+      }, __jsx("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      }, __jsx(antd_lib_icon__WEBPACK_IMPORTED_MODULE_1___default.a, {
+        type: menu.antIcon,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
+        },
+        __self: this
+      }), __jsx("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57
+        },
+        __self: this
+      }, lodash__WEBPACK_IMPORTED_MODULE_8___default.a.capitalize(menu.label)))));
+    }));
+  };
+
+  return __jsx(Sider, {
+    width: 200,
+    style: {
+      background: '#fff'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
+    },
+    __self: this
+  }, renderLeftMenu());
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (LandingLeftSider);
+
+/***/ }),
+
+/***/ "./src/containers/LandingLayout/index.tsx":
+/*!************************************************!*\
+  !*** ./src/containers/LandingLayout/index.tsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/layout/style */ "./node_modules/antd/lib/layout/style/index.js");
+/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/layout */ "./node_modules/antd/lib/layout/index.js");
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _LandingBreadcumbs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./LandingBreadcumbs */ "./src/containers/LandingLayout/LandingBreadcumbs/index.tsx");
+/* harmony import */ var _LandingHeader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./LandingHeader */ "./src/containers/LandingLayout/LandingHeader/index.tsx");
+/* harmony import */ var _LandingLeftSider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./LandingLeftSider */ "./src/containers/LandingLayout/LandingLeftSider/index.tsx");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./index.scss */ "./src/containers/LandingLayout/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_6__);
+
+
+var _jsxFileName = "C:\\Users\\thangluong\\Desktop\\mypc\\Projects\\Personal\\next-typescript-mobx-boiletplate\\src\\containers\\LandingLayout\\index.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
+
+
+
+
+var Content = antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a.Content;
+
+var LandingLayout = function LandingLayout(_ref) {
+  var children = _ref.children,
+      path = _ref.path,
+      title = _ref.title;
+  return __jsx(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }, __jsx(_LandingHeader__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: title,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }), __jsx(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, __jsx(_LandingLeftSider__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }), __jsx(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    className: _index_scss__WEBPACK_IMPORTED_MODULE_6___default.a['page-content'],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, __jsx(_LandingBreadcumbs__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    path: path,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }), __jsx(Content, {
+    style: {
+      background: '#fff',
+      padding: 24,
+      margin: 0,
+      minHeight: 280
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, children))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (LandingLayout);
+
+/***/ }),
+
+/***/ "./src/pages/movies/index.tsx":
+/*!************************************!*\
+  !*** ./src/pages/movies/index.tsx ***!
+  \************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -81331,8 +81331,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var mobx_react__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! mobx-react */ "./node_modules/mobx-react/dist/mobxreact.esm.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _common_http_movies__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../common/http/movies */ "./common/http/movies.ts");
-/* harmony import */ var _containers_LandingLayout__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../containers/LandingLayout */ "./containers/LandingLayout/index.tsx");
+/* harmony import */ var _common_http_movies__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../common/http/movies */ "./src/common/http/movies.ts");
+/* harmony import */ var _containers_LandingLayout__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../containers/LandingLayout */ "./src/containers/LandingLayout/index.tsx");
 
 
 
@@ -81346,7 +81346,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\thangluong\\Desktop\\mypc\\Projects\\Personal\\next-typescript-mobx-boiletplate\\pages\\movies\\index.tsx";
+var _jsxFileName = "C:\\Users\\thangluong\\Desktop\\mypc\\Projects\\Personal\\next-typescript-mobx-boiletplate\\src\\pages\\movies\\index.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement;
 
@@ -81569,14 +81569,14 @@ MoviesPage.getInitialProps = function _callee() {
 
 /***/ }),
 
-/***/ 2:
-/*!*******************************************************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fmovies&absolutePagePath=C%3A%5CUsers%5Cthangluong%5CDesktop%5Cmypc%5CProjects%5CPersonal%5Cnext-typescript-mobx-boiletplate%5Cpages%5Cmovies%5Cindex.tsx ***!
-  \*******************************************************************************************************************************************************************************************************/
+/***/ 12:
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fmovies&absolutePagePath=C%3A%5CUsers%5Cthangluong%5CDesktop%5Cmypc%5CProjects%5CPersonal%5Cnext-typescript-mobx-boiletplate%5Csrc%5Cpages%5Cmovies%5Cindex.tsx ***!
+  \*************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fmovies&absolutePagePath=C%3A%5CUsers%5Cthangluong%5CDesktop%5Cmypc%5CProjects%5CPersonal%5Cnext-typescript-mobx-boiletplate%5Cpages%5Cmovies%5Cindex.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fmovies&absolutePagePath=C%3A%5CUsers%5Cthangluong%5CDesktop%5Cmypc%5CProjects%5CPersonal%5Cnext-typescript-mobx-boiletplate%5Cpages%5Cmovies%5Cindex.tsx!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fmovies&absolutePagePath=C%3A%5CUsers%5Cthangluong%5CDesktop%5Cmypc%5CProjects%5CPersonal%5Cnext-typescript-mobx-boiletplate%5Csrc%5Cpages%5Cmovies%5Cindex.tsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fmovies&absolutePagePath=C%3A%5CUsers%5Cthangluong%5CDesktop%5Cmypc%5CProjects%5CPersonal%5Cnext-typescript-mobx-boiletplate%5Csrc%5Cpages%5Cmovies%5Cindex.tsx!./");
 
 
 /***/ }),
@@ -81592,5 +81592,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js","styles"]]]);
+},[[12,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=movies.js.map

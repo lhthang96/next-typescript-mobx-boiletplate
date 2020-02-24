@@ -93,10 +93,10 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./pages/_app.tsx":
-/*!************************!*\
-  !*** ./pages/_app.tsx ***!
-  \************************/
+/***/ "./src/pages/_app.tsx":
+/*!****************************!*\
+  !*** ./src/pages/_app.tsx ***!
+  \****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -106,8 +106,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var mobx_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mobx-react */ "mobx-react");
 /* harmony import */ var mobx_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(mobx_react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _store_movies__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/movies */ "./store/movies/index.ts");
-var _jsxFileName = "C:\\Users\\thangluong\\Desktop\\mypc\\Projects\\Personal\\next-typescript-mobx-boiletplate\\pages\\_app.tsx";
+/* harmony import */ var _store_movies__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/movies */ "./src/store/movies/index.ts");
+var _jsxFileName = "C:\\Users\\thangluong\\Desktop\\mypc\\Projects\\Personal\\next-typescript-mobx-boiletplate\\src\\pages\\_app.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -141,10 +141,10 @@ const App = ({
 
 /***/ }),
 
-/***/ "./store/movies/index.ts":
-/*!*******************************!*\
-  !*** ./store/movies/index.ts ***!
-  \*******************************/
+/***/ "./src/store/movies/index.ts":
+/*!***********************************!*\
+  !*** ./src/store/movies/index.ts ***!
+  \***********************************/
 /*! exports provided: MoviesStore, moviesStore */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -205,7 +205,7 @@ const moviesStore = new MoviesStore();
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! private-next-pages/_app.tsx */"./pages/_app.tsx");
+module.exports = __webpack_require__(/*! private-next-pages/_app.tsx */"./src/pages/_app.tsx");
 
 
 /***/ }),
